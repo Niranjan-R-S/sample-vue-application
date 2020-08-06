@@ -11,8 +11,6 @@
 </template>
 
 <script>
-import { v4 as uuidv4 } from '../../node_modules/uuid'
-
 export default {
     name: "AddTodo",
     data(){
@@ -23,9 +21,8 @@ export default {
     methods: {
         addTodo(event) {
             event.preventDefault();
-            
+
             const newTodo = {
-                id: uuidv4(),
                 title: this.title,
                 completed: false
             }
